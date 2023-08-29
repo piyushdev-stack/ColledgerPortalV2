@@ -1,0 +1,119 @@
+@import "../../../../assets/theme/_var.scss";
+
+.details {
+    margin-bottom: 10rem;
+
+    .details_in {
+        padding: 4.7rem 5.4rem 4.7rem 8.1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: radial-gradient(55.19% 3091.35% at 55.19% 50.32%, rgba(39, 229, 255, 0.1) 0%, rgba(106, 39, 255, 0.1) 100%);
+        border-radius: 5rem;
+
+        @media (max-width: 1199px) {
+            padding: 3rem 4rem;
+            border-radius: 3rem;
+        }
+
+        @media (max-width: 575px) {
+            display: block;
+        }
+
+        .details_box {
+            display: flex;
+            align-items: flex-end;
+
+            @media (max-width: 1279px) {
+                display: block;
+                text-align: center;
+            }
+
+            @media (max-width: 575px) {
+                margin-bottom: 4rem;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            h3 {
+                font-family: $aileronfont;
+                font-size: 3.5rem;
+                font-weight: 300;
+                line-height: normal;
+                letter-spacing: -0.238px;
+
+                @media (max-width: 1599px) {
+                    font-size: 3rem;
+                }
+
+                @media (max-width: 1479px) {
+                    font-size: 2.6rem;
+                }
+
+                @media (max-width: 1279px) {
+                    font-size: 2.2rem;
+                }
+
+                @media (max-width: 991px) {
+                    font-size: 2rem;
+                }
+
+                @media (max-width: 767px) {
+                    font-size: 1.8rem;
+                }
+            }
+
+            p {
+                font-family: $aileronfont;
+                font-size: 1.6rem;
+                font-weight: 300;
+                line-height: normal;
+                letter-spacing: -0.238px;
+
+                @media (max-width: 991px) {
+                    font-size: 1.4rem;
+                }
+            }
+
+            h2 {
+                font-family: $aileronfont;
+                font-size: 5rem;
+                font-weight: 600;
+                margin-left: 1.2rem;
+                letter-spacing: 1px;
+
+
+                @media (max-width: 1599px) {
+                    font-size: 4.4rem;
+                }
+
+                @media (max-width: 1479px) {
+                    font-size: 4rem;
+                }
+
+                @media (max-width: 1279px) {
+                    font-size: 3.6rem;
+                    margin-top: 2rem;
+                }
+
+                @media (max-width: 991px) {
+                    font-size: 3rem;
+                }
+
+                @media (max-width: 767px) {
+                    font-size: 2.6rem;
+                }
+            }
+
+            &:first-child {
+                padding-right: 1rem;
+            }
+
+            &:last-child {
+                padding-left: 1rem;
+            }
+        }
+    }
+}

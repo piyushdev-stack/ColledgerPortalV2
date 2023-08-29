@@ -1,0 +1,239 @@
+@import "../../../../assets/theme/_var.scss";
+
+.clients {
+    padding: 19.6rem 0 20.8rem;
+
+    .clients_box {
+        position: relative;
+
+        :global {
+            @keyframes rotateOuter {
+                from {
+                    transform: rotate(0deg);
+                }
+
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+
+            @keyframes rotateInner {
+                from {
+                    transform: rotate(0deg);
+                }
+
+                to {
+                    transform: rotate(-360deg);
+                }
+            }
+        }
+
+        .clients_box_outer {
+            margin-inline: auto;
+            width: 44rem;
+            height: 44rem;
+            border-radius: 50%;
+            background: linear-gradient(0deg, $darkblue, $darkblue) padding-box, $gradient border-box;
+            border: 1px solid transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: rotateOuter $rotationTime linear infinite;
+
+            @media (max-width: 767px) {
+                width: 34rem;
+                height: 34rem;
+            }
+
+            img {
+                position: absolute;
+                width: 5.7rem;
+                height: 5.7rem;
+                border-radius: 50%;
+
+                &:nth-child(1) {
+                    transform: rotate(0deg) translateX(calc(219.634925px));
+                }
+
+                &:nth-child(2) {
+                    transform: rotate(60deg) translateX(calc(219.634925px));
+                }
+
+                &:nth-child(3) {
+                    transform: rotate(120deg) translateX(calc(219.634925px));
+                }
+
+                &:nth-child(4) {
+                    transform: rotate(180deg) translateX(calc(219.634925px));
+                }
+
+                &:nth-child(5) {
+                    transform: rotate(240deg) translateX(calc(219.634925px));
+                }
+
+                &:nth-child(6) {
+                    transform: rotate(300deg) translateX(calc(219.634925px));
+                }
+
+                @media (max-width: 767px) {
+
+                    width: 3.7rem;
+                    height: 3.7rem;
+
+                    &:nth-child(1) {
+                        transform: rotate(0deg) translateX(calc(170.634925px));
+                    }
+
+                    &:nth-child(2) {
+                        transform: rotate(60deg) translateX(calc(170.634925px));
+                    }
+
+                    &:nth-child(3) {
+                        transform: rotate(120deg) translateX(calc(170.634925px));
+                    }
+
+                    &:nth-child(4) {
+                        transform: rotate(180deg) translateX(calc(170.634925px));
+                    }
+
+                    &:nth-child(5) {
+                        transform: rotate(240deg) translateX(calc(170.634925px));
+                    }
+
+                    &:nth-child(6) {
+                        transform: rotate(300deg) translateX(calc(170.634925px));
+                    }
+                }
+
+            }
+
+        }
+
+        .clients_box_inner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(180deg, rgba(106, 39, 255, 0.2) 0%, rgba(39, 229, 255, 0) 100%);
+            width: 30.7rem;
+            height: 30.7rem;
+            border-radius: 50%;
+
+            @media (max-width: 767px) {
+                width: 24rem;
+                height: 24rem;
+            }
+
+            .clients_box_inner_logos {
+                width: 18rem;
+                height: 18rem;
+                border-radius: 50%;
+                background-color: $white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                animation: rotateInner $rotationTime linear infinite;
+
+                @media (max-width: 767px) {
+                    width: 12rem;
+                    height: 12rem;
+                }
+
+                img {
+                    width: 5.7rem;
+                    height: 5.7rem;
+                    border-radius: 50%;
+                    position: absolute;
+
+                    &:nth-child(1) {
+                        transform: rotate(120deg) translateX(calc(88.4210526316px));
+                    }
+
+                    &:nth-child(2) {
+                        transform: rotate(240deg) translateX(calc(88.4210526316px));
+                    }
+
+                    &:nth-child(3) {
+                        transform: rotate(0deg) translateX(calc(88.4210526316px));
+                    }
+
+                    @media (max-width: 767px) {
+                        width: 4rem;
+                        height: 4rem;
+
+                        &:nth-child(1) {
+                            transform: rotate(120deg) translateX(calc(58.421053px));
+                        }
+
+                        &:nth-child(2) {
+                            transform: rotate(240deg) translateX(calc(58.421053px));
+                        }
+
+                        &:nth-child(3) {
+                            transform: rotate(0deg) translateX(calc(58.421053px));
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .heading {
+        position: relative;
+        z-index: 1;
+
+        &::after,
+        &::before {
+            content: "";
+            position: absolute;
+            top: 80%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            left: 60%;
+            width: 27.2rem;
+            border-radius: 50%;
+            height: 27.2rem;
+            background-color: $blueclr;
+            filter: blur(93.99533081054688px);
+
+            @media (max-width: 1199px) {
+                content: unset;
+            }
+        }
+
+        &::before {
+            background-color: $lightblue2;
+            opacity: 0.6;
+            top: 30%;
+            left: 30%;
+        }
+
+        h2 {
+            max-width: 45rem;
+            margin-bottom: 2.5rem;
+        }
+
+        p {
+            max-width: 64rem;
+        }
+
+
+        @media (max-width:991px) {
+            text-align: center;
+            margin: 4rem 0 0;
+
+            h2 {
+                margin: 0 auto 2rem;
+            }
+
+            p {
+                margin-inline: auto;
+            }
+        }
+
+    }
+}

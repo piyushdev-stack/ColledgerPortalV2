@@ -1,0 +1,184 @@
+@import "../../../../assets/theme/_var.scss";
+
+.header_nav {
+    display: flex;
+    align-items: center;
+    margin-inline: -1.75rem;
+    padding-inline: 1.2rem;
+
+    li {
+        padding-inline: 1.75rem;
+
+        a {
+            font-size: 1.8rem;
+            line-height: 2.4rem;
+            letter-spacing: -0.17px;
+            color: $white;
+
+            &.active {
+                color: $lightblue;
+            }
+        }
+
+        &.dropdown {
+            position: relative;
+
+            button {
+                background-color: transparent !important;
+                border: none !important;
+                outline: none !important;
+                font-size: 1.8rem;
+                line-height: 2.4rem;
+                letter-spacing: -0.17px;
+                color: $white;
+                box-shadow: none !important;
+                padding: 0;
+
+                &::after {
+                    content: unset;
+                }
+            }
+
+            .dropdown_menu {
+                max-width: 96.2rem;
+                padding: 5rem 12.9rem 9.1rem;
+                border: 1px solid transparent;
+                z-index: 100;
+                background: linear-gradient(0deg, #2A2A39, #2A2A39) padding-box, linear-gradient(180deg, #27E5FF 0%, #6A27FF 100%) border-box;
+                transition: 200ms ease-in-out;
+                border-radius: 2.1rem;
+
+                @media (min-width: 1200px) {
+                    position: fixed !important;
+                    top: 12.8rem !important;
+                    left: 50% !important;
+                    transform: translateX(-50%) translateY(4rem) !important;
+                    width: 100vw;
+                }
+
+                li {
+                    margin-bottom: 8.4rem;
+
+                    @media (max-height: 889px) {
+                        margin-bottom: 4rem;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    a {
+                        font-family: $aileronfont;
+                        font-size: 2rem;
+                        font-weight: 600;
+                        line-height: 4rem;
+                        letter-spacing: 0.01em;
+                        display: block;
+
+                        span {
+                            font-size: 1.2rem;
+                            font-weight: 300;
+                            line-height: 1.8rem;
+                            letter-spacing: 0.01em;
+                        }
+
+                        &:hover {
+                            color: $lightblue;
+
+                            span {
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &:hover {
+                .dropdown_menu {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateX(-50%) translateY(0%);
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1199px) {
+        position: fixed;
+        width: 100%;
+        max-width: 30rem;
+        display: block;
+        height: 100vh;
+        background: $gradient7;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        margin: 0;
+        padding: 0;
+        transition: 200ms ease-in-out;
+
+        &.active {
+            transform: translateX(0);
+        }
+
+        li {
+            padding: 0;
+
+            .logo {
+                padding: 2rem 1rem;
+            }
+
+            a {
+                padding: 2rem 3rem;
+                font-size: 1.6rem;
+            }
+
+            &.dropdown {
+                button {
+                    padding: 2rem 3rem;
+                    width: 100%;
+                    text-align: left;
+                }
+
+                .dropdown_menu {
+                    max-width: 100%;
+                    padding: 0;
+                    width: calc(100% - 2rem);
+                    margin-inline: auto;
+                    position: static !important;
+
+                    transform: translate(0) !important;
+
+                    li {
+                        margin: 0;
+
+                        a {
+                            font-size: 1.6rem;
+                            line-height: 1.4;
+                            padding: 1rem 3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(1rem);
+    visibility: hidden;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    pointer-events: none;
+
+    &.active {
+        pointer-events: all;
+        opacity: 1;
+        visibility: visible;
+    }
+}

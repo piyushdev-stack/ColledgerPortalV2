@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+$basefont: 'Poppins', sans-serif;
+$secondaryfont: 'Poppins', sans-serif;
+$interfont: "Poppins", sans-serif;
+$aileronfont: "Poppins", sans-serif;
+// *** colors
+$black: black;
+$white: white;
+$darkblue: #121315;
+$lightblue: #07D2FB;
+$black1E: #1E1E1E;
+$textclr: #D9DBE1;
+$black33: #333545;
+$gray73: #737373;
+$blueclr: #6A27FF;
+$lightblue2: #27E5FF;
+// *** gradients 
+
+$gradient: linear-gradient(100.09deg, #27E5FF 3.51%, #6A27FF 97.77%);
+$gradient2: linear-gradient(101.51deg, #27E5FF -10.81%, #6A27FF 113.16%);
+$gradient3: linear-gradient(163deg, #27E5FF 0%, #6A27FF 100%);
+$gradient4: linear-gradient(92.03deg, #27E5FF 0%, #6A27FF 99.7%);
+$gradient5: linear-gradient(98.28deg, #6A27FF 19.43%, #27E5FF 118.51%);
+$gradient6: linear-gradient(180deg, rgba(106, 39, 255, 0.2) 0%, rgba(39, 229, 255, 0) 100%);
+$gradient7: linear-gradient(133deg, #173744 0%, #211d44 100%);
+
+
+// *** times
+$rotationTime: 20s;

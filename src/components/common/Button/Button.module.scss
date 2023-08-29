@@ -1,0 +1,41 @@
+@import "../../../assets/theme/_var.scss";
+
+.button {
+    padding: 0 2.25rem;
+    border: 2px solid transparent;
+    background: linear-gradient(180deg, $darkblue, $darkblue) padding-box, $gradient border-box;
+    border-radius: 1.5rem;
+    font-size: 1.4rem;
+    color: $white;
+    height: 4rem;
+    transition: 200ms ease-in-out;
+
+    &:hover {
+        background: $gradient;
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+
+    &[data-variant*="whitish"] {
+        background: $white;
+        padding: 0 1.6rem;
+        color: $black1E;
+    }
+
+    &[data-variant*="pill"] {
+        background: linear-gradient(180deg, $darkblue, $darkblue) padding-box, $gradient2 border-box;
+        border-radius: 4rem;
+
+        &:hover {
+            background: $gradient2;
+        }
+
+    }
+
+    &[data-variant*="large"] {
+        height: 5.4rem;
+        font-size: 1.8rem;
+    }
+}

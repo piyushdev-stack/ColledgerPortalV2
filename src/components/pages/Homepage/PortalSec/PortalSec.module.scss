@@ -1,0 +1,56 @@
+@import "../../../../assets/theme/_var.scss";
+
+.portal_sec {
+    padding: 9.9rem 0 10.1rem;
+    border: 1px solid transparent;
+    background: linear-gradient(0deg, $darkblue, $darkblue) padding-box,
+        $gradient4 border-box;
+
+
+    .portal_inner {
+        text-align: center;
+        max-width: 41rem;
+        margin-inline: auto;
+
+        h2 {
+            font-family: $aileronfont;
+            font-size: 5.5rem;
+            font-weight: 600;
+            line-height: 6.7rem;
+            letter-spacing: 0em;
+            margin-bottom: 4.7rem;
+
+            span {
+                background: $gradient3;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            @media (max-width: 1599px) {
+                font-size: 4.4rem;
+            }
+
+            @media (max-width: 1479px) {
+                font-size: 4rem;
+            }
+
+            @media (max-width: 1279px) {
+                font-size: 3.6rem;
+            }
+
+            @media (max-width: 991px) {
+                font-size: 3rem;
+            }
+
+            @media (max-width: 767px) {
+                font-size: 2.6rem;
+            }
+
+        }
+
+        button {
+            width: 18.6rem;
+        }
+    }
+}

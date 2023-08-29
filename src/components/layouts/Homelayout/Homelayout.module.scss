@@ -1,0 +1,8 @@
+@import "../../../assets/theme/_var.scss";
+
+.home_layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: $darkblue;
+}
